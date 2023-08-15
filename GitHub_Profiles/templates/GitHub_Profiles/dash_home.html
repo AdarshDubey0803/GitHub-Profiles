@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block title %} GitHub Profiles {% endblock %}
+    </title>
+
+
+    <style>
+        .button {
+            background-color:rgb(27, 116, 233);
+             padding: 6px 10px; 
+             border-radius:5px; 
+            border: none;
+        }
+        .inside_button {
+            color: white;
+            text-decoration: none;
+            font-size: 150%; 
+        }
+    </style>
+</head>
+
+<body>
+    <center><p style="color:red;">Built by 200050015 200050036</p>
+    
+        <h1>Welcome to GitHub Profiles!</h1>
+        <button class="button"><div> <a href = "{% url 'explore' %}" class = "inside_button"> Explore </a></div></button>
+        <button class="button"><div><a href = #  class = "inside_button"> My Profile </a></div></button>
+        {% if user.is_authenticated %}
+        <button class="button"><div><a href = "/logout"  class = "inside_button"> Logout </a></div></button>
+        {% endif %}
+        </center>
+        
+        {% block content %}
+        
+        {% endblock %}
+        
+</body>
+</html>	

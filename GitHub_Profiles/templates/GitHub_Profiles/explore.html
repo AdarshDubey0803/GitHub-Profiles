@@ -1,0 +1,14 @@
+{% extends 'GitHub_Profiles/dash_home.html' %}
+
+{% block title %}
+Explore
+{% endblock %}
+
+{% block content %}
+	<ul>
+	{% for i in data %}
+	<li> <button style = "background-color:white; border-color:blue; padding: 2vh 0.8vw; border-radius: 10%; color: blue"> {{ i.UserName }} </button> </li>
+	<br> <br>
+	{% endfor %}
+	</ul>
+{% endblock %}

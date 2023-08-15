@@ -1,0 +1,2 @@
+https://www.ordinarycoders.com/blog/article/django-user-register-login-logout
+Rest are from link used in lab statements
